@@ -609,50 +609,14 @@ em { font-style: italic; }
    -------------------------------- */
 .insta { background: var(--white); }
 
-.insta__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 230px);
-  gap: .75rem;
-  max-width: 820px;
+.insta__widget {
+  max-width: 900px;
   margin: 0 auto 2.5rem;
   border-radius: var(--r-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
 }
-
-.insta__post {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  transition: transform var(--ease), filter var(--ease);
-}
-.insta__post:hover { transform: scale(1.04); filter: brightness(1.1); z-index: 1; }
-
-.insta__post--1 { background: linear-gradient(135deg, #B8432F, #D4853A); }
-.insta__post--2 { background: linear-gradient(135deg, #1C2B3A, #2D3E54); }
-.insta__post--3 { background: linear-gradient(135deg, #8B2F1F, #B8432F); }
-.insta__post--4 { background: linear-gradient(135deg, #243346, #3A5068); }
-.insta__post--5 { background: linear-gradient(135deg, #C8B89A, #D4853A); }
-.insta__post--6 { background: linear-gradient(135deg, #1C2B3A, #B8432F); }
-
-.insta__post-inner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .75rem;
-  color: rgba(255,255,255,.88);
-}
-.insta__post-inner svg { width: 3rem; height: 3rem; }
-.insta__post-inner span {
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+behold-widget { display: block; }
 
 .insta__cta { text-align: center; }
 
@@ -868,13 +832,6 @@ em { font-style: italic; }
   .contact__grid { grid-template-columns: 1fr; }
   .contact__map { height: 300px; }
 
-  /* Instagram grid 2 columnas en mobile */
-  .insta__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 180px);
-  }
-  .insta__post--6 { display: none; }
-
   /* Footer */
   .footer__grid { grid-template-columns: 1fr; gap: 2.25rem; padding: 3rem 0 2.5rem; }
   .footer__brand p { max-width: 100%; }
@@ -885,10 +842,6 @@ em { font-style: italic; }
    -------------------------------- */
 @media (max-width: 480px) {
   .materials__grid { grid-template-columns: 1fr; }
-
-  .insta__grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .insta__post { height: 200px; }
-  .insta__post--4, .insta__post--5, .insta__post--6 { display: none; }
 
   .btn--whatsapp span { display: none; }
 
