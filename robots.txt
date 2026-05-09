@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://materiales3arroyos.com.ar/sitemap.xml
